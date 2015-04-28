@@ -1,5 +1,5 @@
 #include <iostream>
-int Adder(int num1=1, int num2-2);
+int Adder(int num1=1, int num2=2);
 
 int main(void)
 {
