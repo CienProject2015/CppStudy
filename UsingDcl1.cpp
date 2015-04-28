@@ -1,17 +1,17 @@
 #include <iostream>
 
-namespace Hybrid
+namespace Cien
 {
-  void HybFunc(void)
+  void UnrealChat(void)
   {
-    std::cout<<"So simple function!"<<std::endl;
-    std::cout<<"In namespace Hybrid"<<std::endl;
+    std::cout<<"So Unreal!"<<std::endl;
+    std::cout<<"In namespace Cien"<<std::endl;
   }
 }
 
 int main(void)
 {
-  using Hybrid::HybFunc;
+  using Cien::UnrealChat;
   HybFunc();
   return 0;
 }
