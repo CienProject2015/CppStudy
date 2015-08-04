@@ -20,7 +20,7 @@ Circle::Circle(int r){
 }
 
 double Circle::getArea(){
-	return 3.14 * radius * radius;
+	return 3.14159265 * radius * radius;
 }
 
 int main(){
@@ -31,4 +31,6 @@ int main(){
 	Circle pizza(30); // 매개 변수 있는 생성자 호출, 30이 r에 전달됨
 	area = pizza.getArea();
 	cout << "pizza 면적은 " << area << endl;
+	
+	return 0;
 }
