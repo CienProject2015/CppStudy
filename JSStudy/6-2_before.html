@@ -4,39 +4,19 @@
     <meta charset="utf-8"/>
     <title></title>
     <style>
-		.outerBox{
-			border:1px solid;
-			width:320px;
-			height:240px;
-		}		
-        .gameObj{
+        .gameobj{
             position: absolute;
         }
-		#objBody{
-			-webkit-transform:rotate(-90deg);
-		}
-		#objFighter{
-			width:100px;
-			-webkit-transform:translate(100px,100px);
-		}
-		#objHand{
-			-webkit-transform:translate(16px,-32px);
-		}
-		#objSword{
-			width:100px;
-			-webkit-transform: translate(16px,-16px);width:100px;
-		}
-		
     </style>
 </head>
     
 <body>
-    <div class="outerBox">
-        <div id="objFighter" class="gameobj">
-            <div id="objBody" class="gameObj">
+    <div style="border:1px solid; width:320px; height:240px;">
+        <div id="obj-fighter" class="gameobj" style="width:100px; -webkit-transform:translate(100px,100px)">
+            <div class="gameobj" style="-webkit-transform:rotate(90deg);">
                 ()전사의몸=:
-                <div id="objHand" class="gameobj">@
-                    <div id="objSword" class="gameobj">
+                <div id="obj-hand" class="gameobj" style="-webkit-transform:translate(16px,-32px);">@
+                    <div class="gameobj" style="-webkit-transform: translate(16px,-16px);width:100px;">
                         =)==검+>
                     </div>
                 </div>
@@ -45,8 +25,8 @@
     </div>
     
     <script>
-        var fighter = document.querySelector('#objFighter');
-        var hand = document.querySelector('#objHand');
+        var fighter = document.querySelector('#obj-fighter');
+        var hand = document.querySelector('#obj-hand');
         document.body.addEventListener('mousemove', function(evt){
             var computedStyle = window.getComputedStyle(fighter);
             var trans = computedStyle.getPropertyValue('-webkit-transform');
