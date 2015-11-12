@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style>
+        .gamweobj{
+            position: absolute;
+        }
+    </style>
+</head>
+    
+<body>
+    <div style="border:1px solid; width:320px; height:240px;">
+        <div id="obj-fighter" class="gameobj" style="width:100px; -webkit-transform:translate(100px,100px)">
+            <div class="gameobj" style="-webkit-transform:rotate(90deg);">
+                ()전사의몸=:
+                <div id="obj-hand" class="gameobj" style="-webkit-transform:translate(16px,-32px);">@
+                    <div class="gameobj" style="-webkit-transform: translate(16px,-16px);width:100px;">
+                        =)==검+>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        var fighter = document.querySelector('#obj-fighter');
+        var hand = document.querySelector('#obj-hand');
+        document.body.addEventListener('mousemove', function(evt){
+            var computedStyle = window.getComputedStyle(fighter);
+            var trans = computedStyle.getPropertyValue('-webkit-transform');
+            var mat = new WebKitCSSMatrix(trans);
+            console.log(evt.webkitMovementX);
+            
+            mat = mat.translate(evt.webkitMovementX,0);
+            fighter.style.WebkitTransform = mat.toString();
+            var computedStyle = window.getComputedStyle(hand);
+            var trans = computedStyle.getPropertyValue('-webkit-transform');
+            var mat = new WebKitCSSMatrix(trans);
+            mat = mat.rotate(-evt.webkitMovementY);
+            console.log(mat.toString());
+            hand.style.WebkitTransform = mat.toString();
+        });
+    </script>
+</body>
+</html>
