@@ -17,5 +17,9 @@ class TextBlock{
 
 void print(const TextBlock& ctb)
 {
+  TextBlock tb("Hello");
+  std::cout << ctb[0];
+  
+  const TextBlock ctb("World");
   std::cout << ctb[0];
 }
