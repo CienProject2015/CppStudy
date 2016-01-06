@@ -3,14 +3,15 @@
 #include <vector>
 using namespace std;
  
-template<typename C> void dump(const char *desc, C c) { 
+template<typename C> void dump(const char *desc, C c) 
+{ 
 	cout.width(12);cout << left << desc << "==> ";
     	copy(c.begin(),c.end(),ostream_iterator<typename C::value_type>(cout," ")); cout << endl; 
 }
  
 void main()
 {
-     int ar[]={1,2,3,4,5,6,7,8,9};
+	int ar[]={1,2,3,4,5,6,7,8,9};
     
 	vector<string> v1;
 	vector<double> v2(10);
