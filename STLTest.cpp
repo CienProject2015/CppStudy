@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <iterator>
 using namespace std;
  
 template<typename C> void dump(const char *desc, C c) 
