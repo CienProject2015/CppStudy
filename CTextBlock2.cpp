@@ -12,8 +12,8 @@ private:
 std::size_t CTextBlock::length() const
 {
   if(!lengthIsValid){
-    textLength = std::strlen(pText);
-    lengthIsValid = true;
+    textLength = std::strlen(pText); //no problem
+    lengthIsValid = true; //no problem
   }
   
   return textLength;
