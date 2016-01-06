@@ -22,4 +22,10 @@ void print(const TextBlock& ctb)
   
   const TextBlock ctb("World");
   std::cout << ctb[0];
+  
+  std::cout << tb[0];
+  tb[0] = 'x';
+  
+  std::cout << ctb[0];
+  ctb[0] = 'x'; //컴파일 에러발생
 }
