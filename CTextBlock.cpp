@@ -9,6 +9,7 @@ public:
 		return pText[position];
 	}
 
+
 private:
 	char *pTest;
 };
