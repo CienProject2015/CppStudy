@@ -15,7 +15,7 @@ private:
 
 
 void main(){
-	const CTextBlock cctb("Hello");
-	char *pc = &cctb[0];
-	*pc = 'J'  // cctb = "Jello"
+  const CTextBlock cctb("Hello");
+  char *pc = &cctb[0];
+  *pc = 'J'  // cctb = "Jello"
 }
